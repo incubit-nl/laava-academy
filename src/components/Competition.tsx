@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { competitors } from "../data/content";
+import InfoTip from "./InfoTip";
 
 interface Props {
   onNext: () => void;
@@ -27,7 +28,21 @@ export default function Competition({ onNext }: Props) {
             >
               <div style={{ fontWeight: 700, fontSize: "1.1rem", marginBottom: "0.2rem" }}>{c.name}</div>
               <div style={{ fontSize: "0.8rem", color: "var(--neutral-400)", marginBottom: "0.75rem" }}>{c.location}</div>
-              <div style={{ fontSize: "0.85rem", color: "var(--success)", lineHeight: 1.5 }}>{c.winLine}</div>
+              <div style={{ fontSize: "0.85rem", color: "var(--success)", lineHeight: 1.5 }}>
+                {i === 1 ? (
+                  <>
+                    Zij verkopen een platform (SaaS
+                    <InfoTip term="SaaS">
+                      Software as a Service — software die je huurt via een abonnement
+                      in de cloud, in plaats van zelf te bouwen of te installeren.
+                      Voordeel: snel live. Nadeel: je bent afhankelijk van hun platform (lock-in).
+                    </InfoTip>
+                    ), wij bouwen op maat. Zero lock-in vs. hun lock-in.
+                  </>
+                ) : (
+                  c.winLine
+                )}
+              </div>
             </div>
           ))}
         </div>
@@ -42,7 +57,24 @@ export default function Competition({ onNext }: Props) {
                 <span className="card-label card-label-green">Waar wij winnen</span>
                 <ul className="text-muted text-sm" style={{ paddingLeft: "1.2rem", marginTop: "0.5rem", lineHeight: 1.8 }}>
                   {competitors[active].wins.map((w, i) => (
-                    <li key={i}>{w}</li>
+                    <li key={i}>
+                      {w}
+                      {w.includes("Sovereign AI") && (
+                        <InfoTip term="Sovereign AI">
+                          AI die volledig onder controle van de klant draait: op hun eigen
+                          servers, in hun eigen netwerk, met open-source modellen. Geen data
+                          die naar externe partijen gaat. Essentieel voor sectoren met strenge
+                          privacy-eisen (overheid, zorg, defensie, financien).
+                        </InfoTip>
+                      )}
+                      {w.includes("Zero lock-in") && (
+                        <InfoTip term="Zero lock-in">
+                          De klant is eigenaar van alle code en kan op elk moment overstappen
+                          naar een andere partij. Geen afhankelijkheid van Laava's platform of
+                          proprietary tools. Dit is zeldzaam in de markt.
+                        </InfoTip>
+                      )}
+                    </li>
                   ))}
                 </ul>
               </div>

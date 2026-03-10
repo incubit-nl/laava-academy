@@ -37,7 +37,7 @@ export default function Result({ score }: Props) {
   }, [pct]);
 
   return (
-    <div className="section section-light" style={{ minHeight: "100vh", display: "flex", alignItems: "center" }}>
+    <div className="section section-alt" style={{ minHeight: "100vh", display: "flex", alignItems: "center" }}>
       <div className="container text-center">
         <p className="label">Resultaat</p>
         <p className="text-muted">Je quiz score</p>

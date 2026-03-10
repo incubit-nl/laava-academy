@@ -33,7 +33,7 @@ export default function Quiz({ onNext, onScoreUpdate }: Props) {
   }
 
   return (
-    <div className="section section-light">
+    <div className="section section-alt">
       <div className="container">
         <div className="text-center mb-2">
           <p className="label">Kennistest</p>

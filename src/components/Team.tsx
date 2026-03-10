@@ -22,7 +22,7 @@ const members = [
 
 export default function Team({ onNext }: Props) {
   return (
-    <div className="section section-light">
+    <div className="section section-alt">
       <div className="container text-center">
         <p className="label">Het Team</p>
         <h2>3 Founders, Alle Pilaren Gedekt</h2>

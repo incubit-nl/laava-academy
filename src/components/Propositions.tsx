@@ -1,3 +1,5 @@
+import InfoTip from "./InfoTip";
+
 interface Props {
   onNext: () => void;
 }
@@ -28,13 +30,25 @@ export default function Propositions({ onNext }: Props) {
               rapport.
             </p>
             <p className="text-muted text-sm mt-1">
-              Buyer: CTO, Head of IT, Innovation Manager
+              Buyer: CTO
+              <InfoTip term="CTO">
+                Chief Technology Officer — de eindverantwoordelijke voor technologie
+                binnen een bedrijf. Beslist over technische investeringen en AI-strategie.
+              </InfoTip>
+              , Head of IT, Innovation Manager
             </p>
           </div>
 
           <div className="card">
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start" }}>
-              <h3>Forward Deployed Engineer</h3>
+              <h3>
+                Forward Deployed Engineer
+                <InfoTip term="Forward Deployed Engineer">
+                  Een senior engineer die fysiek of remote bij de klant werkt,
+                  alsof het hun eigen teamlid is. Populair gemaakt door Palantir.
+                  Het idee: directe impact, geen afstand tussen bouwer en gebruiker.
+                </InfoTip>
+              </h3>
               <span className="card-label card-label-yellow" style={{ margin: 0 }}>Retainer</span>
             </div>
             <p className="text-muted text-sm mt-1" style={{ lineHeight: 1.6 }}>
@@ -53,7 +67,13 @@ export default function Propositions({ onNext }: Props) {
             </div>
             <p className="text-muted text-sm mt-1" style={{ lineHeight: 1.6 }}>
               AI-kosten 50-80% omlaag. Korte audit, snel resultaat. Perfecte
-              opener als de CFO meekijkt.
+              opener als de CFO
+              <InfoTip term="CFO">
+                Chief Financial Officer — de financieel directeur. Belangrijk
+                als mede-beslisser bij investeringen in AI. Spreekt de taal
+                van ROI en kostenbesparing.
+              </InfoTip>{" "}
+              meekijkt.
             </p>
             <p className="text-muted text-sm mt-1">
               Buyer: CTO, CFO, Head of Data
@@ -66,7 +86,13 @@ export default function Propositions({ onNext }: Props) {
           <p>
             90 minuten, gratis, geen verplichtingen. De prospect brengt een
             concreet probleem, wij geven een Rood/Groen verdict, een
-            napkin-architectuur en ROI-schatting.{" "}
+            napkin-architectuur
+            <InfoTip term="Napkin-architectuur">
+              Een high-level technisch ontwerp geschetst op "de achterkant van een
+              servetje" — geen 50 pagina's documentatie, maar een helder diagram
+              dat in 2 minuten uitlegt hoe de oplossing werkt.
+            </InfoTip>{" "}
+            en ROI-schatting.{" "}
             <strong style={{ color: "var(--neutral-900)" }}>
               Dit is je nr. 1 doel: mensen in deze scan krijgen.
             </strong>
