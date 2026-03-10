@@ -109,7 +109,7 @@ export default function Competition({ onNext }: Props) {
         </div>
 
         <div className="mt-3">
-          <button className="btn btn-primary" onClick={onNext}>Start de Quiz</button>
+          <button className="btn btn-primary" onClick={onNext}>Outreach Playbook</button>
         </div>
       </div>
     </div>

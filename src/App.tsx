@@ -4,14 +4,16 @@ import Pillars from "./components/Pillars";
 import Team from "./components/Team";
 import Propositions from "./components/Propositions";
 import Cases from "./components/Cases";
+import Objections from "./components/Objections";
 import Competition from "./components/Competition";
+import Outreach from "./components/Outreach";
 import Quiz from "./components/Quiz";
 import PitchSimulator from "./components/PitchSimulator";
 import Roadmap from "./components/Roadmap";
 import Checklist from "./components/Checklist";
 import Result from "./components/Result";
 
-const TOTAL_SCREENS = 11;
+const TOTAL_SCREENS = 13;
 
 function App() {
   const [screen, setScreen] = useState(0);
@@ -35,11 +37,13 @@ function App() {
     <Team onNext={() => goTo(3)} />,
     <Propositions onNext={() => goTo(4)} />,
     <Cases onNext={() => goTo(5)} />,
-    <Competition onNext={() => goTo(6)} />,
-    <Quiz onNext={() => goTo(7)} onScoreUpdate={setScore} />,
-    <PitchSimulator onNext={() => goTo(8)} />,
-    <Roadmap onNext={() => goTo(9)} />,
-    <Checklist onNext={() => goTo(10)} />,
+    <Objections onNext={() => goTo(6)} />,
+    <Competition onNext={() => goTo(7)} />,
+    <Outreach onNext={() => goTo(8)} />,
+    <Quiz onNext={() => goTo(9)} onScoreUpdate={setScore} />,
+    <PitchSimulator onNext={() => goTo(10)} />,
+    <Roadmap onNext={() => goTo(11)} />,
+    <Checklist onNext={() => goTo(12)} />,
     <Result score={score} />,
   ];
 

@@ -16,13 +16,13 @@ export default function Cases({ onNext }: Props) {
             <span className="card-label card-label-green">Bouw</span>
             <h3>Bouwbesluit Assistent</h3>
             <p className="text-muted text-sm" style={{ lineHeight: 1.6, marginTop: "0.5rem" }}>
-              Agent
+              RAG-gebaseerde agent
               <InfoTip term="AI Agent">
                 Een autonoom stukje software dat zelfstandig taken uitvoert: het kan
                 documenten doorzoeken, informatie combineren, en antwoorden formuleren
                 — zonder dat een mens elke stap hoeft aan te sturen.
               </InfoTip>{" "}
-              die bouwregelgeving doorzoekt en interpreteert.
+              die 1000+ pagina's bouwregelgeving doorzoekt met citation enforcement.
             </p>
             <div className="metric-box">
               <div className="text-muted text-sm">Zoektijd</div>
@@ -30,6 +30,7 @@ export default function Cases({ onNext }: Props) {
                 <span style={{ textDecoration: "line-through", color: "var(--neutral-400)" }}>15-20 min</span>
                 <span style={{ fontSize: "1.5rem", fontWeight: 800, color: "var(--success)" }}>30 sec</span>
               </div>
+              <div className="text-muted text-sm" style={{ marginTop: "0.25rem" }}>90% vragen direct beantwoord</div>
             </div>
           </div>
 
@@ -37,11 +38,11 @@ export default function Cases({ onNext }: Props) {
             <span className="card-label card-label-green">Vastgoed</span>
             <h3>Kopersservice AI</h3>
             <p className="text-muted text-sm" style={{ lineHeight: 1.6, marginTop: "0.5rem" }}>
-              Automatische e-mailafhandeling voor kopersservice bij vastgoedontwikkelaars.
+              E-mail automatisering agent met Outlook integratie. Auto-categoriseer + draft responses.
             </p>
             <div className="metric-box">
               <div style={{ fontSize: "1.25rem", fontWeight: 800, color: "var(--success)" }}>70% geautomatiseerd</div>
-              <div className="text-muted text-sm" style={{ marginTop: "0.25rem" }}>Responstijd: 48 uur naar 4 uur</div>
+              <div className="text-muted text-sm" style={{ marginTop: "0.25rem" }}>Responstijd: 48 uur → 4 uur. 3x throughput.</div>
             </div>
           </div>
 
@@ -57,7 +58,7 @@ export default function Cases({ onNext }: Props) {
               </InfoTip>
             </h3>
             <p className="text-muted text-sm" style={{ lineHeight: 1.6, marginTop: "0.5rem" }}>
-              Intelligente laag bovenop SharePoint die documenten vindbaar maakt.
+              Permission-aware semantic search over 50.000+ documenten met SharePoint access controls.
             </p>
             <div className="metric-box">
               <div className="text-muted text-sm">Zoektijd</div>
@@ -65,6 +66,7 @@ export default function Cases({ onNext }: Props) {
                 <span style={{ textDecoration: "line-through", color: "var(--neutral-400)" }}>12 min</span>
                 <span style={{ fontSize: "1.5rem", fontWeight: 800, color: "var(--success)" }}>45 sec</span>
               </div>
+              <div className="text-muted text-sm" style={{ marginTop: "0.25rem" }}>95% success rate. Zero permission violations.</div>
             </div>
           </div>
         </div>
