@@ -1,0 +1,9 @@
+name: Deploy
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    uses: incubit-nl/infrastructure/.github/workflows/build-and-deploy.yaml@main
+    with:
+      app-name: laava-academy
