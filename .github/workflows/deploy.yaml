@@ -4,8 +4,25 @@ on:
     branches: [main]
   workflow_dispatch:
 
+env:
+  REGISTRY: registry.incubit.dev
+
 jobs:
-  deploy:
-    uses: incubit-nl/infrastructure/.github/workflows/build-and-deploy.yaml@main
-    with:
-      app-name: laava-academy
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: Dockerfile
+          platforms: linux/amd64
+          push: true
+          tags: |
+            ${{ env.REGISTRY }}/laava-academy:sha-${{ github.sha }}
+            ${{ env.REGISTRY }}/laava-academy:latest
+          cache-from: type=registry,ref=${{ env.REGISTRY }}/laava-academy:buildcache
+          cache-to: type=registry,ref=${{ env.REGISTRY }}/laava-academy:buildcache,mode=max
